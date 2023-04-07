@@ -20,7 +20,11 @@ export class App extends Component {
 
   componentDidMount = () => {
     const parsedContacts = JSON.parse(localStorage.getItem('contacts'));
-    if (parsedContacts && parsedContacts.length > 0) {
+
+    // bye, goofy easter egg 'no empty contacts'
+    // if (parsedContacts && parsedContacts.length > 0) {
+
+    if (parsedContacts) {
       this.setState({ contacts: parsedContacts });
     }
   };
